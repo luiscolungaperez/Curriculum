@@ -14,7 +14,8 @@
 
 .CV {
   margin: 20px 0;
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.75);
+  padding: 20px 0;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
   grid-column: 2 / 3;
   display: grid;
   grid-template: repeat(2, auto) / 35% 65%;
@@ -145,14 +146,56 @@
 .programs__list {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
+
+.programs__list p {
+  padding: 3px 0;
+  font-size: 13px;
+}
+
 .programs__starts {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.CV__references {
-  grid-row: 5/6;
+.programs__starts p {
+  padding: 3px 0;
+  font-size: 13px;
+  letter-spacing: 10px;
+  text-align: right;
+}
+
+.CV__aside--references {
+  padding: 5px 15px;
+}
+
+.CV__aside--references h2 {
+  text-transform: uppercase;
+  width: 100%;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #000000;
+}
+
+.references__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.references__list p {
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.references__list p span {
+  padding: 0px 10px;
+  font-size: 13px;
 }
 
 .CV__experence {
