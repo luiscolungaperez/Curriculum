@@ -9,7 +9,7 @@
 .container {
   display: grid;
   width: 100%;
-  grid-template: auto / 20% 60% 20%;
+  grid-template: auto / 15% 70% 15%;
 }
 
 .CV {
@@ -22,7 +22,6 @@
 }
 
 .CV__header {
-  background-color: white;
   grid-column: 1 / 3;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -70,11 +69,13 @@
 .CV__aside {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  padding: 0 10px;
 }
 
 .CV__content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  padding: 0 10px;
 }
 
 .CV__aside--info {
@@ -111,7 +112,8 @@
 }
 
 .CV__aside--im {
-  padding: 5px 15px;
+  box-sizing: content-box;
+  padding: 5px 10px;
 }
 
 .CV__aside--im h2 {
@@ -124,12 +126,12 @@
 .CV__aside--im p {
   width: 100%;
   padding: 5px 0;
-  font-size: 13px;
+  font-size: 12px;
   text-align: justify;
 }
 
 .CV__aside--programs {
-  padding: 5px 15px;
+  padding: 5px 10px;
   display: grid;
   grid-template: repeat(2, auto) / repeat(2, auto);
 }
@@ -172,7 +174,7 @@
 }
 
 .CV__aside--references {
-  padding: 5px 15px;
+  padding: 5px 10px;
 }
 
 .CV__aside--references h2 {
@@ -198,7 +200,260 @@
   font-size: 13px;
 }
 
-.CV__experence {
+.CV__content--experence {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.CV__content--experence h2 {
+  text-transform: uppercase;
+  width: 95%;
+  margin-top: 10px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #000000;
+}
+
+.experence__enterprice {
+  width: 95%;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.experence__enterprice--date {
+  width: 100%;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.experence__enterprice--date p {
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+.experence__enterprice--data {
+  width: 100%;
   grid-column: 2/3;
-  grid-row: 2/5;
+  text-align: justify;
+}
+
+.experence__enterprice--data h3 {
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.experence__enterprice--data h4 {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #9a9a9a;
+}
+
+.experence__enterprice--data p {
+  font-size: 13px;
+}
+
+.CV__content--education {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.CV__content--education h2 {
+  text-transform: uppercase;
+  width: 95%;
+  margin-top: 10px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #000000;
+}
+
+.education__school {
+  padding: 10px 0;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 25% 65%;
+}
+
+.education__school--date {
+  width: 100%;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.education__school--date p {
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+.education__school--data {
+  width: 100%;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.education__school--data h3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template: 1fr / 1fr;
+  }
+
+  .CV {
+    margin: 0;
+    padding: 20px 5px;
+    box-shadow: none;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .CV__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .CV__header--photo img {
+    width: 300px;
+  }
+
+  .CV__header--data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .CV__aside {
+    padding: 0 10px;
+  }
+
+  .CV__aside--info {
+    grid-template-columns: 30% 10% 30% 30%;
+  }
+
+  .CV__aside--info .info__icons {
+    grid-column: 2/3;
+  }
+
+  .CV__aside--info .info__list {
+    grid-column: 3/4;
+  }
+
+  .CV__content {
+    padding: 0 10px;
+  }
+
+  .experence__enterprice {
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .experence__enterprice--date {
+    grid-row: 2;
+  }
+
+  .experence__enterprice--data {
+    grid-row: 1;
+  }
+  .education__school {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education__school--date {
+    grid-column: 1;
+  }
+
+  .education__school--data {
+    grid-column: 2;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .container {
+    grid-template: 1fr / 1fr;
+  }
+
+  .CV {
+    margin: 0;
+    padding: 20px 5px;
+    box-shadow: none;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .CV__header--photo img {
+    width: 50%;
+  }
+
+  .CV__header--data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .CV__aside {
+    padding: 0 10px;
+  }
+
+  .CV__aside--info {
+    grid-template-columns: 30% 70%;
+  }
+
+  .CV__aside--info .info__icons {
+    grid-column: 1;
+  }
+
+  .CV__aside--info .info__list {
+    grid-column: 2;
+  }
+
+  .CV__content {
+    padding: 0 10px;
+  }
+
+  .experence__enterprice {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .experence__enterprice--date {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .experence__enterprice--data {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .education__school {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .education__school--date {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .education__school--data {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
