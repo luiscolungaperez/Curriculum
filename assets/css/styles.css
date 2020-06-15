@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template: auto / 20% 60% 20%;
+}
+
+.CV {
+  margin: 20px 0;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.75);
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template: repeat(2, auto) / 35% 65%;
+}
+
+.CV__header {
+  background-color: white;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.CV__header--photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CV__header--photo img {
+  width: 65%;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.CV__header--data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.CV__header--data h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+  letter-spacing: 1px;
+}
+
+.CV__header--data h3 {
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.CV__header--data h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.CV__aside {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.CV__content {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.CV__aside--info {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 160px;
+}
+
+.CV__aside--info .info__icons {
+  grid-column: 1/2;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CV__aside--info .info__icons i {
+  color: #467bc2;
+}
+
+.CV__aside--info .info__list {
+  grid-column: 2/3;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.CV__aside--info .info__list p {
+  font-size: 15px;
+}
+
+.CV__aside--im {
+  padding: 5px 15px;
+}
+
+.CV__aside--im h2 {
+  text-transform: uppercase;
+  width: 100%;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #000000;
+}
+
+.CV__aside--im p {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 13px;
+  text-align: justify;
+}
+
+.CV__aside--programs {
+  padding: 5px 15px;
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+}
+
+.CV__aside--programs h2 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  text-transform: uppercase;
+  width: 100%;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #000000;
+}
+
+.programs__list {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.programs__starts {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.CV__references {
+  grid-row: 5/6;
+}
+
+.CV__experence {
+  grid-column: 2/3;
+  grid-row: 2/5;
+}
